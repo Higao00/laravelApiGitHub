@@ -17,3 +17,7 @@ use Illuminate\Support\Facades\Route;
 Auth::routes();
 
 Route::get('/', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+
+Route::get('/import-user', function () {
+    return view('importUser');
+})->middleware('auth')->name('import-user');
