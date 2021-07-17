@@ -5,6 +5,8 @@
     <img src="https://img.shields.io/static/v1?label=composer&message=gerenciador-pacotes&color=success&style=for-the-badge>" />
     <img src="https://img.shields.io/static/v1?label=npm&message=gerenciador-pacotes&color=inactive&style=for-the-badge>" />
     <img src="https://img.shields.io/static/v1?label=bootstrap&message=framework&color=red&style=for-the-badge>" />
+    <img src="https://img.shields.io/static/v1?label=mysql&message=banco-dados&color=important&style=for-the-badge>" />strap
+    
 </div>
 
 <h1 align="initial">Integração com a api do github.</h1>
@@ -20,13 +22,19 @@
     &nbsp&nbsp 2 - node.js <br>
     &nbsp&nbsp 3 - composer 1.0* <br>
     &nbsp&nbsp 4 - npm 5.0* <br>
+    &nbsp&nbsp 5 - mysql 5* <br>
+    
 
 Depois de atender todos os requisitos citados, siga o passo a passo:<br>
 
 1 - Baixe o projeto para sua maquina através do github, com o comando "git clone https://github.com/Higao00/laravelApiGitHub.git"<br>
+    
+2 - Configure o arquivo .env, e crie sua base de dados.<br>
+    
+3 - Rode o comando "composer install" dentro do projeto. Com esse comando instalara as dependências do php<br>
 
-2 - Rode o comando "composer install" dentro do projeto. Com esse comando instalara as dependências do php<br>
+4 - Rode o comando npm install dentro do projeto. Com esse comando instalara as dependências do node.js<br>
 
-3 - Rode o comando npm run dev dentro da pasta do projeto. Com esse comando instalara as dependências do node.js<br>
-
-4 - Rode o comando php artisan serve, assim o servidor ira iniciar local na url: 127.0.0.1:8000.</p>
+5 - Rode o comando php artisan migrate. Com esse comando ele criara as tabelas necessárias para executar o projeto.<br>
+   
+6 - Rode o comando php artisan serve, assim o servidor ira iniciar local na url: 127.0.0.1:8000.</p>
