@@ -28,6 +28,12 @@
 </head>
 
 <body>
+    <div class="load_global no_active">
+        <div class="spinner-border m-5" role="status">
+            <span class="visually-hidden"></span>
+        </div>
+    </div>
+
     <div id="app">
         <nav class="navbar navbar-expand-md navbar-dark bg-dark shadow-sm">
             <div class="container">
@@ -44,7 +50,9 @@
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <!-- Left Side Of Navbar -->
                     <ul class="navbar-nav mr-auto">
-
+                        <li class="nav-item">
+                            <a class="nav-link" href="{{ route('import-user') }}">Importar Usuario</a>
+                        </li>
                     </ul>
 
                     <!-- Right Side Of Navbar -->
@@ -72,7 +80,7 @@
                                 <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
                                     <a class="dropdown-item" href="{{ route('logout') }}"
                                         onclick="event.preventDefault();
-                                                                                 document.getElementById('logout-form').submit();">
+                                                                                                             document.getElementById('logout-form').submit();">
                                         {{ __('Logout') }}
                                     </a>
 
@@ -99,6 +107,8 @@
             $('.menu').toggleClass('menu_mobile');
         });
     </script>
+
+    @stack('scripts')
 </body>
 
 </html>
