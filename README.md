@@ -5,7 +5,7 @@
     <img src="https://img.shields.io/static/v1?label=composer&message=gerenciador-pacotes&color=success&style=for-the-badge>" />
     <img src="https://img.shields.io/static/v1?label=npm&message=gerenciador-pacotes&color=inactive&style=for-the-badge>" />
     <img src="https://img.shields.io/static/v1?label=bootstrap&message=framework&color=red&style=for-the-badge>" />
-    <img src="https://img.shields.io/static/v1?label=mysql&message=banco-dados&color=important&style=for-the-badge>" />strap
+    <img src="https://img.shields.io/static/v1?label=mysql&message=banco-dados&color=important&style=for-the-badge>" />
     
 </div>
 
