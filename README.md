@@ -29,12 +29,12 @@ Depois de atender todos os requisitos citados, siga o passo a passo:<br>
 
 1 - Baixe o projeto para sua maquina através do github, com o comando "git clone https://github.com/Higao00/laravelApiGitHub.git"<br>
     
-2 - Configure o arquivo .env, e crie sua base de dados.<br>
+2 - Configure o arquivo .env, no projeto existe um arquivo chamado .env.example use como base. Depois crie sua base de dados, utilizaremos mais tarde.<br>
     
-3 - Rode o comando "composer install" dentro do projeto. Com esse comando instalara as dependências do php<br>
+3 - Rode o comando "composer install" dentro do projeto. Com esse comando instalara as dependências do php.<br>
 
-4 - Rode o comando npm install dentro do projeto. Com esse comando instalara as dependências do node.js<br>
+4 - Rode o comando npm install dentro do projeto. Com esse comando instalara as dependências do node.js.<br>
 
-5 - Rode o comando php artisan migrate. Com esse comando ele criara as tabelas necessárias para executar o projeto.<br>
+5 - Rode o comando php artisan migrate. Com esse comando ele ira criar as tabelas dentro da basa de dados, que foi configurada no arquivo .env.<br>
    
 6 - Rode o comando php artisan serve, assim o servidor ira iniciar local na url: 127.0.0.1:8000.</p>
