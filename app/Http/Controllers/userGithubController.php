@@ -17,6 +17,7 @@ class userGithubController extends Controller
     public function index()
     {
         $data = Gituser::all();
+
         return view('home', compact('data'));
     }
 
@@ -132,6 +133,10 @@ class userGithubController extends Controller
      */
     public function destroy($id)
     {
-        //
+        Gituser::destroy($id);
+
+        $result["success"] = true;
+        $result["dados"] = $id;
+        echo json_encode($result);
     }
 }

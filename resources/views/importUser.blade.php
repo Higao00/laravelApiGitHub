@@ -37,6 +37,7 @@
                                     <thead class="thead-dark">
                                         <tr>
                                             <th scope="col">#</th>
+                                            <th scope="col">AVATAR</th>
                                             <th scope="col">LOGIN</th>
                                             <th scope="col">NOME</th>
                                             <th scope="col">LOCALIZAÇÃO</th>
@@ -77,7 +78,7 @@
 
                     $.ajax({
                         method: "GET",
-                        url: "https://api.github.com/users/" + username,
+                        url: "https://api.github.com/users/" + username.replace(' ', ''),
                         dataType: "json",
                         success: function(result) {
                             if (!$('#' + result["id"]).length) {
@@ -102,6 +103,15 @@
                                             '<td><div class="form-check"><input class="form-check-input" name="users[]" value="' +
                                             result["id"] + '"type="checkbox" id="user' +
                                             result["id"] + '" ' + existes + '></div></td>';
+
+                                        if (result["avatar_url"] != null) {
+                                            cols +=
+                                                '<td><img style="border: 0" width="40" height="40" src="' +
+                                                result['avatar_url'] +
+                                                '" class="img-thumbnail"></td>';
+                                        } else {
+                                            cols += '<td> Não informado </td>';
+                                        }
 
                                         if (result["login"] != null) {
                                             cols += '<td>' + result["login"] + '</td>';
@@ -151,7 +161,6 @@
             $('#addUsersSelected').click(function() {
                 var checkeds = new Array();
                 var allUsersCheckeds = new Array();
-                var userExists = '';
 
                 $("input[name='users[]']:checked").each(function() {
                     checkeds.push($(this).val());
@@ -183,12 +192,9 @@
 
                     $('.load_global').removeClass('yes_active');
                     $('.load_global').toggleClass('no_active');
-
-                    if (userExists == '') {
-                        swal('Sucesso!',
-                            'Os usuarios foram inseridos com sucesso !!',
-                            "success");
-                    }
+                    swal('Sucesso!',
+                        'Os usuarios foram inseridos com sucesso !!',
+                        "success");
 
                 } else {
                     swal('Oops!',
